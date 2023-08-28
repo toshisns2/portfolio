@@ -1,0 +1,111 @@
+/* 共通 */
+* {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* レイアウト */
+.header {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+    background-color: lightcoral
+
+}
+.main {
+    max-width: 1240px;
+    padding: 30px 20px;
+    margin: 0 auto;
+    background-color: lightblue;
+
+}
+
+.footer {
+    max-width: 1240px;
+    padding: 1rem 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: lightgray;
+}
+
+/* 個別 */
+.header {
+    display: flex;
+}
+
+.logo {
+    width: 20%;
+    height: 32px;
+    border: 1px solid red;
+}
+
+.tab-menu {
+    width: 80%;
+    height: 32px;
+    display:flex;
+    /* border: 1px solid red; */
+}
+
+.tab__list {
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border: 1px solid red;
+}
+
+.card {
+    box-shadow: 0 3px 6px black;
+}
+
+.card__img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.card__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards--col3 {
+    padding-bottom: 30px;;
+}
+.cards--col3:last-child {
+    padding-bottom: 0;
+}
+
+.cards__item {
+    width: 30%;
+    margin-right: 5%;
+    /* margin-bottom: 30px; */
+}
+
+.cards__item:nth-of-type(3n){
+    margin-right: 0;
+}
+
+@media screen and (max-width:768px) {
+    .cards__item {
+        width:100%;
+        margin-bottom: 30px;;
+    }
+    .cards__item:nth-of-type(3n){
+        margin-right: 30px;
+    }
+}
+
