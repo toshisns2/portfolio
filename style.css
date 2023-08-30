@@ -13,27 +13,31 @@ li{
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 /* レイアウト */
 .header {
     max-width: 1240px;
+    box-sizing: border-box;
     padding: 0 20px;
     margin: 0 auto;
     background-color: lightcoral
-
+    
 }
 .main {
     max-width: 1240px;
+    box-sizing: border-box;
     padding: 30px 20px;
     margin: 0 auto;
     background-color: lightblue;
-
+    
 }
 
 .footer {
     max-width: 1240px;
-    padding: 1rem 0;
+    box-sizing: border-box;
+    padding: 1rem 20px;
     margin: 0 auto;
     text-align: center;
     background-color: lightgray;
@@ -42,16 +46,28 @@ a {
 /* 個別 */
 .header {
     display: flex;
+    justify-content: space-between;
+}
+
+.logo__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 20%; */
+    height: 32px;
 }
 
 .logo {
-    width: 20%;
-    height: 32px;
-    border: 1px solid red;
+    width:120px;
+    height:24px;
+    background-color: black;
+    color:white;
+    font-size: 18px;
+    text-align: center;
 }
 
 .tab-menu {
-    width: 80%;
+    /* width: 80%; */
     height: 32px;
     display:flex;
     /* border: 1px solid red; */
@@ -59,53 +75,62 @@ a {
 
 .tab__list {
     padding: 0.2rem 1rem 0.2rem 1rem;
-    border: 1px solid red;
+}
+
+.mv {
+    width: 100%;
+    height: 320px;
+    object-fit:cover;
+    padding-bottom: 30px;
 }
 
 .card {
     box-shadow: 0 3px 6px black;
+    border-radius: 4px;
 }
 
 .card__img {
     width: 100%;
-    height: 320px;
-    object-fit: cover;
+    height: 240px;
+    object-fit: contain;
 }
 
 .card__title {
     font-size: 1.2rem;
     font-weight: bold;
+    text-align: center;
 }
 
-.cards {
+.card__text {
+    padding: 4px;
+}
+
+.cards-col3 {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 30px;
 }
 
-.cards--col3 {
-    padding-bottom: 30px;;
-}
-.cards--col3:last-child {
+.cards-col3:last-child {
     padding-bottom: 0;
 }
 
-.cards__item {
+.cards-col3__item {
     width: 30%;
     margin-right: 5%;
+    background-color: #fff;
     /* margin-bottom: 30px; */
 }
 
-.cards__item:nth-of-type(3n){
+.cards-col3__item:nth-of-type(3n){
     margin-right: 0;
 }
 
 @media screen and (max-width:768px) {
-    .cards__item {
+    .cards-col3__item {
         width:100%;
-        margin-bottom: 30px;;
-    }
-    .cards__item:nth-of-type(3n){
-        margin-right: 30px;
+        margin-bottom: 30px;
+        margin-right: 0;
     }
 }
 
